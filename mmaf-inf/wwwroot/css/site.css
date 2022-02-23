@@ -1,6 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+body {
+    margin: 0;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -8,16 +12,18 @@ a.navbar-brand {
 }
 
 h1 {
-  font-size: 12px;
+  font-size: 40px;
 }
 
-homebanner {
+.homebanner {
     position: sticky;
     height: 300px;
     background-image: url("https://via.placeholder.com/1440x300/");
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Provide sufficient contrast against white background */
