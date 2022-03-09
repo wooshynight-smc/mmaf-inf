@@ -12,7 +12,7 @@ a.navbar-brand {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 45px;
   font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -28,6 +28,22 @@ h1 {
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+}
+
+.bluehomepage {
+    height: 300px;
+    text-align: left;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    background-color: white;
+    padding-left: 10;
+    padding-right: 10;
+}
+
+.bluehomepage:hover {
+    background-color: aqua;
+    transition: 0.5s;
 }
 
 /* Provide sufficient contrast against white background */
