@@ -29,7 +29,7 @@ namespace mmaf_inf.Controllers
             return View();
         }
 
-        public IActionResult Blog ()
+        public IActionResult News()
         {
             return View();
         }

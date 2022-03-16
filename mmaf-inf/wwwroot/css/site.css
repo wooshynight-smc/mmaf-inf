@@ -5,16 +5,40 @@ body {
     margin: 0;
 }
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+#navbar {
+    position: absolute;
+    padding-top: 3em;
+    height: 2em;
+    width: 100%;
+    overflow: hidden;
+    float: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: white;
 }
 
 h1 {
   font-size: 45px;
   font-family: 'Red Hat Display', sans-serif;
 }
+
+h2 {
+    font-size: 30px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+p {
+    font-size: 19px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
 
 .homebanner {
     height: 400px;
@@ -31,14 +55,16 @@ h1 {
 }
 
 .bluehomepage {
-    height: 300px;
+    height: 275px;
     text-align: left;
     display: flex;
-    align-items: left;
     justify-content: left;
     background-color: white;
-    padding-left: 10;
-    padding-right: 10;
+    padding: 2em;
+    margin-top: 2em;
+    margin-left: 7em;
+    margin-right: 7em;
+    text-decoration: none;
 }
 
 .bluehomepage:hover {
@@ -47,9 +73,6 @@ h1 {
 }
 
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
 
 .btn-primary {
   color: #fff;
