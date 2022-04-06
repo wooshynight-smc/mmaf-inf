@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using mmaf_inf.Database;
 using mmaf_inf.Models;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace mmaf_inf.Controllers
@@ -24,9 +26,16 @@ namespace mmaf_inf.Controllers
             return View();
         }
 
+        [Route("collection")]
         public IActionResult Collection()
         {
-            return View();
+            var rows = DatabaseConnector.GetRows("select * from product");
+            List<string> names = new List<string>();
+            foreach (var row in rows)
+            {
+                names.Add(row["naam"].ToString());
+            }
+            return View(names);
         }
 
         public IActionResult News()
