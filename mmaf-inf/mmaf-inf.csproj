@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="Views\Home\trashbin.txt" />
+    <None Remove="Views\Media\" />
+    <None Remove="Views\Assets\production ID_4965871.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,4 +17,10 @@
     <PackageReference Include="MySql.Data" Version="8.0.28" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Assets\production ID_4965871.mp4" />
+  </ItemGroup>
 </Project>

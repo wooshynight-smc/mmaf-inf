@@ -39,6 +39,9 @@ p {
     font-family: 'Red Hat Display', sans-serif;
 }
 
+div {
+    margin-bottom: 10px;
+}
 
 .homebanner {
     height: 400px;
@@ -46,7 +49,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("https://via.placeholder.com/1440x400/");
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,6 +71,24 @@ p {
 
 .bluehomepage:hover {
     background-color: aqua;
+    transition: 0.5s;
+}
+
+.greenhomepage {
+    height: 275px;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    padding: 2em;
+    margin-top: 2em;
+    margin-left: 7em;
+    margin-right: 7em;
+    text-decoration: none;
+}
+
+.greenhomepage:hover {
+    background-color: limegreen;
     transition: 0.5s;
 }
 

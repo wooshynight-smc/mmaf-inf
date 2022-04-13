@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <p>Voornaam*: <input type="text" name="firstname" placeholder="First Name" class:required /></p>
+    @Html.ValidationMessageFor(m => m.FirstName)
+    <p>Achternaam*: <input type="text" name="lastname" placeholder="Last Name" class:required /></p>
+    @Html.ValidationMessageFor(m => m.LastName)
+    <p>E-mail address*: <input type="email" name="email" placeholder="E-mail address" class:required /></p>
+    @Html.ValidationMessageFor(m => m.Email)
+    <p>Phone number*: <input type="tel" name="phone" placeholder="Phone number" class:required /></p>
+    <p>Message*: <input type="text" name="message" size=50 placeholder="Your message here. We will respond to your inquiry as soon as possible/" class:required /></p>
+    <input type="submit" value="send!" />
+</form>
+<p>fields marked with an asterisk (*) are mandatory.</p>
+
+@if (Model != null) {
+    <p>mission success, @Model.FirstName @Model.LastName! we will contact you as soon as possible! thank you for your inquiry.</p>
+}

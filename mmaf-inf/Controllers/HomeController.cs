@@ -16,15 +16,44 @@ namespace mmaf_inf.Controllers
             _logger = logger;
         }
 
+        [Route("index")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Route("privacy")]
         public IActionResult Privacy()
         {
             return View();
         }
+
+        [Route("contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("contact")]
+        public IActionResult Contact(Person person)
+        {
+
+            ViewData["voornaam"] = person.FirstName;
+            ViewData["achternaam"] = person.LastName;
+
+            return View(person);
+        }
+
+        [HttpPost]
+        public IActionResult Contact(Person person)
+        {
+            if (ModelState.IsValid)
+                return Redirect("/success")
+
+            return View(person);
+        }
+
 
         [Route("collection")]
         public IActionResult Collection()
@@ -38,7 +67,8 @@ namespace mmaf_inf.Controllers
             return View(names);
         }
 
-        public IActionResult News()
+        [Route("blog")]
+        public IActionResult Blog()
         {
             return View();
         }
