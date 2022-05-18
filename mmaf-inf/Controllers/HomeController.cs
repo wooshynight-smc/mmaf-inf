@@ -16,7 +16,6 @@ namespace mmaf_inf.Controllers
             _logger = logger;
         }
 
-        [Route("index")]
         public IActionResult Index()
         {
             return View();
@@ -42,14 +41,8 @@ namespace mmaf_inf.Controllers
             ViewData["voornaam"] = person.FirstName;
             ViewData["achternaam"] = person.LastName;
 
-            return View(person);
-        }
-
-        [HttpPost]
-        public IActionResult Contact(Person person)
-        {
             if (ModelState.IsValid)
-                return Redirect("/success")
+                return Redirect("/success");
 
             return View(person);
         }
