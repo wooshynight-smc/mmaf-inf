@@ -25,8 +25,8 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
-    font-family: 'Red Hat Display', sans-serif;
+   font-size: 30px;
+   font-family: 'Red Hat Display', sans-serif;
 }
 
 h3 {
@@ -54,6 +54,11 @@ div {
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+}
+
+#homebanner {
+    background: url(mmaf-inf\Views\Assets\homepagevid.jpg) no-repeat;
+    background-size: cover;
 }
 
 .bluehomepage {

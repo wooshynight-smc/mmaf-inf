@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Assets\" />
+    <Folder Include="wwwroot\NewFolder\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Assets\production ID_4965871.mp4" />
