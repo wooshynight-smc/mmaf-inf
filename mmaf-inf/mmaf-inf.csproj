@@ -9,7 +9,7 @@
   <ItemGroup>
     <None Remove="Views\Home\trashbin.txt" />
     <None Remove="Views\Media\" />
-    <None Remove="Views\Assets\production ID_4965871.mp4" />
+    <None Remove="wwwroot\Assets\production ID_4965871.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,10 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Assets\" />
-    <Folder Include="wwwroot\NewFolder\" />
+    <Folder Include="wwwroot\Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Assets\production ID_4965871.mp4" />
+    <Content Include="wwwroot\Assets\production ID_4965871.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Assets\homepagevid.mp4" />
   </ItemGroup>
 </Project>

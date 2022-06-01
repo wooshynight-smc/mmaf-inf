@@ -45,6 +45,8 @@ div {
 
 .homebanner {
     height: 400px;
+    width: 100vw;
+    object-fit:cover;
     text-align: center;
     display: flex;
     align-items: center;
@@ -54,11 +56,21 @@ div {
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+    margin:0;
 }
 
 #homebanner {
     background: url(mmaf-inf\Views\Assets\homepagevid.jpg) no-repeat;
     background-size: cover;
+}
+
+.homebannertext {
+    text-align:center;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    position:absolute;
+    z-index:1;
 }
 
 .bluehomepage {
@@ -69,9 +81,10 @@ div {
     background-color: white;
     padding: 2em;
     margin-top: 2em;
-    margin-left: 7em;
-    margin-right: 7em;
+    margin-left: 20%;
+    margin-right: 20%;
     text-decoration: none;
+    flex-direction: column;
 }
 
 .bluehomepage:hover {
@@ -87,9 +100,10 @@ div {
     background-color: white;
     padding: 2em;
     margin-top: 2em;
-    margin-left: 7em;
-    margin-right: 7em;
+    margin-left: 20%;
+    margin-right: 20%;
     text-decoration: none;
+    flex-direction: column;
 }
 
 .greenhomepage:hover {
