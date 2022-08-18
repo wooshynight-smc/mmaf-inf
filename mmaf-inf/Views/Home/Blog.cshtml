@@ -1,10 +1,28 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿@{
+    ViewData["Title"] = "Blog";
+}
 
+<body>
+    <div class="homebanner">
+        <img class="homebanner" src="https://via.placeholder.com/350x150" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg" width=60 style="position:absolute; top:36.5%; left: 50%; transform: translate(-50%, -50%);" />
+        <div class="homebannertext">
+            <h1>view all news about the MMAF here</h1>
+        </div>
+    </div>
+
+    <section class="field-content">
+        <section class="accordion">
+            <input type="radio" name="collapse" id="handle1" checked="checked">
+            <h2 class="handle">
+                <label for="handle1">
+                    The Visible Short Heading
+                </label>
+            </h2>
+
+            <div class="accordion-content">
+                <p>Your detailed contents...</p>
+            </div>
+        </section>
+    </section>
 </body>
-</html>

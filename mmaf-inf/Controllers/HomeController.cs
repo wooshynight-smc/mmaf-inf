@@ -66,6 +66,26 @@ namespace mmaf_inf.Controllers
             return View();
         }
 
+        [Route("visit")]
+        public IActionResult Visit()
+        {
+            return View();
+        }
+
+        [Route("studiom")]
+        public IActionResult StudioM()
+        {
+            return View();
+        }
+
+        [Route("detail/{id}")]
+        public IActionResult Details(int id)
+        {
+            var product = GetProduct(id);
+
+            return View(product);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
