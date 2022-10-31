@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using mmaf_inf.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace mmaf_inf
     {
         public static void Main(string[] args)
         {
+            DatabaseConnector.GetRows();
             CreateHostBuilder(args).Build().Run();
         }
 

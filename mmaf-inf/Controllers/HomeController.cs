@@ -51,7 +51,7 @@ namespace mmaf_inf.Controllers
         [Route("collection")]
         public IActionResult Collection()
         {
-            var rows = DatabaseConnector.GetRows("select * from product");
+            var rows = DatabaseConnector.GetRows();
             List<string> names = new List<string>();
             foreach (var row in rows)
             {
@@ -76,14 +76,6 @@ namespace mmaf_inf.Controllers
         public IActionResult StudioM()
         {
             return View();
-        }
-
-        [Route("detail/{id}")]
-        public IActionResult Details(int id)
-        {
-            var product = GetProduct(id);
-
-            return View(product);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

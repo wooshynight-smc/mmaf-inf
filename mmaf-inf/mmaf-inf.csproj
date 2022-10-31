@@ -9,11 +9,14 @@
   <ItemGroup>
     <None Remove="Views\Home\trashbin.txt" />
     <None Remove="Views\Media\" />
+    <None Remove="Microsoft.Data.Sqlite" />
+    <None Remove="database.sqlite" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.22" />
     <PackageReference Include="MySql.Data" Version="8.0.28" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.10" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,5 +24,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\Media\homepagevid.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="database.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
