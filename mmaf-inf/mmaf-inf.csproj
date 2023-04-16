@@ -11,12 +11,14 @@
     <None Remove="Views\Media\" />
     <None Remove="Microsoft.Data.Sqlite" />
     <None Remove="database.sqlite" />
+    <None Remove="System.Data.SQLite" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.22" />
     <PackageReference Include="MySql.Data" Version="8.0.28" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.10" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
   </ItemGroup>
 
   <ItemGroup>

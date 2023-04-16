@@ -14,7 +14,7 @@ namespace mmaf_inf
     {
         public static void Main(string[] args)
         {
-            DatabaseConnector.GetRows();
+            DatabaseConnector.GetRows("select * from collection");
             CreateHostBuilder(args).Build().Run();
         }
 

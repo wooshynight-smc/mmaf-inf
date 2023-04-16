@@ -1,0 +1,23 @@
+﻿@using mmaf_inf.Database
+@model Collection
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<body>
+    <div class="detail">
+        <p><a href="/collection" style="color: black">← back to collection</a></p>
+        <br />
+    </div>
+    <div>
+        <img class="collectiondetailimage" src="~/Media/Collection/@Model.Image">
+    </div>
+    <div class="detail">
+        <h1>@Model.Name</h1>
+        <h2 style="color: dimgrey">@Model.Artist, @Model.Year</h2>
+        <br />
+        <p style="color: grey">@Model.Dimensions, @Model.Material</p>
+        <p>@Model.Description</p>
+    </div>
+</body>
+

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - mmaf_inf</title>
     <link rel="stylesheet" href="~/css/site.css" />
+    <!--icon library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
@@ -32,7 +34,7 @@
                         const f = document.getElementById('form');
                         const q = document.getElementById('query');
                         const google = 'https://www.google.com/search?q=site%3A+';
-                        const site = '127.0.0.1:5000';
+                        const site = '127.0.0.1:5000'; //yeah ok i got lazy here
 
                         function submitted(event) {
                         event.preventDefault();
@@ -53,47 +55,43 @@
         </main>
     </div>
 
+    <!--newsletter popup script!! tf happened to the onclick function now??? (15/04/23: removed onclick function in li/a element)-->
+
+    <script>
+        function openNewsletterForm() {
+            document.getElementById("newsletterPopup").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("newsletterPopup").style.display = "none";
+        }
+    </script>
+
     <footer>
         <ul>
             <li> <a href="/donate">donate</a></li>
-            <li> <a href="/contact#newsletter">newsletter</a></li>
+            <li> <a href="/newsletter">newsletter</a></li>
         </ul>
         <p>
             <a href="/about-us">about us</a><br />
             <a href="/careers">careers</a><br />
-            <a href="/press">press</a>
+            <a href="/contact">press & contact</a>
         </p>
-        <div class="col sqs-col-6 span-6">
-            <div class="sqs-block socialaccountlinks-v2-block sqs-block-socialaccountlinks-v2" data-block-type="54" id="block-yui_3_17_2_1_1551096257162_6120">
-                <div class="sqs-block-content">
-                    <div class="sqs-svg-icon--outer social-icon-alignment-right social-icons-color-white social-icons-size-small social-icons-style-regular ">
-                        <nav class="sqs-svg-icon--list">
-                            <a href="https://www.facebook.com/" target="_blank" class="sqs-svg-icon--wrapper facebook" aria-label="Taiwan Lacrosse Association">
-                                <div>
-                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-                                        <use class="sqs-use--icon" xlink:href="#facebook-icon"></use>
-                                        <use class="sqs-use--mask" xlink:href="#facebook-mask"></use>
-                                    </svg>
-                                </div>
-                            </a><a href="http://instagram.com/" target="_blank" class="sqs-svg-icon--wrapper instagram" aria-label="Taiwan Lacrosse Association">
-                                <div>
-                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-                                        <use class="sqs-use--icon" xlink:href="#instagram-icon"></use>
-                                        <use class="sqs-use--mask" xlink:href="#instagram-mask"></use>
-                                    </svg>
-                                </div>
-                            </a><a href="https://www.youtube.com/" target="_blank" class="sqs-svg-icon--wrapper youtube" aria-label="">
-                                <div>
-                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-                                        <use class="sqs-use--icon" xlink:href="#youtube-icon"></use>
-                                        <use class="sqs-use--mask" xlink:href="#youtube-mask"></use>
-                                    </svg>
-                                </div>
-                            </a>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+        <p style="width: 15vw"></p>
+        <div class="socialicons">
+            <p>
+                <a href="https://facebook.com/" class="fa fa-facebook"></a>
+            </p>
+            <p>
+                <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            </p>
+            <p>
+                <a href="https://instagram.com/" class="fa fa-instagram"></a>
+            </p>
+            <p>
+                <a href="https://youtu.be/dQw4w9WgXcQ" class="fa fa-youtube"></a>
+            </p>
+            <p style="width: 10vw"></p>
         </div>
     </footer>
 

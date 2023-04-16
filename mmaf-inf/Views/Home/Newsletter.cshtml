@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Newsletter";
+}
+
+<body>
+    <div class="newsletter-popup" id="newsletter-wrapper">
+        <div class="white-popup">
+            <div class="banner-newsletter">
+                <img src="~/Media/newsletter.gif">
+            </div>
+            <div class="kt-popup-newsletter">
+                <div class="popup-title">
+                    <h1>Join Our List</h1>
+                    <p>the latest mmaf updates and additions, right in your mailbox!</p>
+                </div>
+                <form class="form-subscribe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+                    <input class="input required email" type="email" value="" placeholder="Enter your email here" name="EMAIL" id="mce-EMAIL">
+                    <button class="subscribebutton" name="subscribe" id="subscribe" type="submit">Join List</button>
+                </form>
+                <div class="checkbox-bottom">
+                    <input id="checkBox" type="checkbox" value="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

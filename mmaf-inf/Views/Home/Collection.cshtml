@@ -1,4 +1,5 @@
-﻿@model List<string>
+﻿@using mmaf_inf.Database;
+@model List<Collection>
 @{
     ViewData["Title"] = "Collection";
 }
@@ -10,12 +11,59 @@
     <title>collection</title>
 </head>
 <body>
-    <div class="text=center">
-        <h1>Alle namen!</h1>
-        @foreach(string naam in Model)
-        {
-            <p>@naam</p>
-        }
+    <div class="homebanner">
+        <img class="homebanner" src="https://via.placeholder.com/350x150" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg" width=60 style="position:absolute; top:36.5%; left: 50%; transform: translate(-50%, -50%);" />
+        <div class="homebannertext">
+            <h1>placeholder for spotlight!</h1>
+        </div>
     </div>
+
+    <div class="field-content">
+        <h1 style="text-align: center">on display now:</h1>
+    </div>
+
+    <style>
+        .collectiongrid {
+            width: 80vw;
+            align-content: center;
+            justify-content: center;
+            column-gap: 10px;
+            row-gap: 15px;
+        }
+
+        .collectiongrid li {
+            width: 20vw;
+            min-height: 250px;
+            display: flex;
+            justify-content: space-between;
+            vertical-align: top;
+            margin: 5px;
+            zoom: 1;
+            _height: 250px;
+        }
+
+        .collectiongrid ul {
+            columns: 3;
+            gap: 15vw 10vw;
+        }
+
+    </style>
+
+    <div class="collectiongrid">
+        <ul>
+            @foreach (Collection collection in Model)
+            {
+                <li style="display:inline-block">
+                    <a href="/collection/@collection.Id" style="color: black">
+                        @collection.Name &nbsp; <small>@collection.Year</small>
+                        <br />
+                        <img src="~/Media/Collection/@collection.Image" width="200px" height="200px" />
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+
 </body>
 </html>

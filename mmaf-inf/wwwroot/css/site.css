@@ -6,6 +6,7 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     margin: 0;
     display: inline;
+    min-height: 100vh;
 }
 
 * {
@@ -114,6 +115,14 @@ footer ul li a {
     background: #545454;
 }
 
+newsletterbutton {
+    color: white;
+    font-size: 19px;
+    text-transform: lowercase;
+    padding: 10px 15px;
+    background: #545454;
+}
+
 footer p {
     margin-top: 3vh;
     margin-left: 20px;
@@ -129,25 +138,11 @@ footer p a {
     color: white;
 }
 
-.sqs-use--icon, .sqs-use--mask {
-    fill: transparent;
-    transition: fill 170ms ease-in-out;
+footer {
+    position: page;
+    bottom: 0;
+    width: 100%;
 }
-
-.sqs-svg-icon--wrapper {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 170ms ease-in-out;
-    z-index: 0;
-}
-
-.social-icon-alignment-right .sqs-svg-icon--list {
-    text-align: right;
-}
-
 /*font settings*/
 
 h1 {
@@ -174,6 +169,70 @@ div {
     margin-bottom: 10px;
     display: inline-block;
 }
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+    }
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 /*banners pages*/
 
@@ -310,6 +369,42 @@ div {
     margin-right: 25vw;
 }
 
+.collectiongrid {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    font-size: 19px;
+    font-family: 'Red Hat Display', sans-serif;
+
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.detail {
+    margin-top: 3vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    margin-left: 10vw;
+    margin-right: 25vw;
+}
+
+.collectiondetailimage {
+    height: 500px;
+    width: 100vw;
+    object-fit: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7px 0 0px 0;
+}
 
 /*blog*/
 
